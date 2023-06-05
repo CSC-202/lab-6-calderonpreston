@@ -314,14 +314,41 @@ for experiment in RESULTS:
 
 # YOUR CODE GOES BELOW
 ## LIST
+plt.subplot(1, 4, 2)
+plt.bar(x = .5, height = RESULTS['back  (r)'], label = "back  (r)", width = .5)
+plt.bar(x = 1, height = RESULTS['front  (r)'], label = "front  (r)", width = .5)
+plt.bar(x = .5, height = RESULTS['back  (i)'], label = "back  (i)", width = .5)
+plt.bar(x = 1, height = RESULTS['front  (i)'], label = "front  (i)", width = .5)
+plt.legend()
+plt.yticks([])
+plt.xticks([])
+plt.xlabel("List")
 
 
 ## STACK
+plt.subplot(1, 4, 3)
+plt.bar(x = .5, height = RESULTS['push  (r)'], label = "push  (r)", width = .5)
+plt.bar(x = 1, height = RESULTS['pop  (r)'], label = "pop  (r)", width = .5)
+plt.bar(x = .5, height = RESULTS['push  (i)'], label = "push  (i)", width = .5)
+plt.bar(x = 1, height = RESULTS['pop  (i)'], label = "pop  (i)", width = .5)
+plt.legend()
+plt.yticks([])
+plt.xticks([])
+plt.xlabel("Stack")
 
 
 ## QUEUE
+plt.subplot(1, 4, 3)
+plt.bar(x = .5, height = RESULTS['deq  (r)'], label = "deq  (r)", width = .5)
+plt.bar(x = 1, height = RESULTS['enq  (r)'], label = "enq  (r)", width = .5)
+plt.bar(x = .5, height = RESULTS['deq  (i)'], label = "deq  (i)", width = .5)
+plt.bar(x = 1, height = RESULTS['enq  (i)'], label = "enq  (i)", width = .5)
+plt.legend()
+plt.yticks([])
+plt.xticks([])
+plt.xlabel("Queue")
 
 
 ## SAVE FIGURE
-plt.savefig('./figs/stapleton_lab6_analysis.png')
+#plt.savefig('./figs/stapleton_lab6_analysis.png')
 plt.show()
